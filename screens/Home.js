@@ -10,7 +10,48 @@ import {
 import HeaderBar from '../components/HeaderBar';
 import {COLORS, SIZES, FONTS, icons, dummyData, constants} from '../constants';
 import {connect} from 'react-redux';
+import appTheme from '../constants/theme';
 
+const promoTabs = constants.promoTabs;
+const Tabs =({appTheme})=>{
+  return (
+    <View style={{
+      flexDirection:'row',
+      alignItems:'center',
+      justifyContent:'space-between',
+      marginTop:SIZES.padding,
+      backgroundColor:appTheme.tabBackgroundColor,
+      borderRadius:SIZES.radius,
+    }}>
+     {/* Tab -Indicatior */}
+
+     {/* Tab */}
+     {promoTabs.map((item,index)=>{
+       return(
+        <TouchableOpacity
+        key={`PromoTab-${index}`}
+        onPress={() => console.log(item)}>
+        <View
+          style={{
+            paddingHorizontal: 15,
+            alignItems: 'center',
+            justifyContent: 'center',
+            height: 40,
+          }}>
+          <Text
+            style={{
+              color: COLORS.white,
+              ...FONTS.h3,
+            }}>
+            {item.title}
+          </Text>
+        </View>
+      </TouchableOpacity>
+       )
+     })}
+    </View>
+  )
+}
 function renderAvailableRewards() {
   return (
     <TouchableOpacity
@@ -87,6 +128,20 @@ function renderAvailableRewards() {
 }
 
 const Home = ({navigation, appTheme}) => {
+
+  function renderPromoDeal(){
+    return (
+      <View style={{
+        flex :1,
+        alignItems:'center'
+      }}>
+       {/* Header -Tabs */}
+       
+       {/* Details */}
+
+      </View>
+    )
+  }
   return (
     <View style={styles.container}>
       <HeaderBar />
@@ -103,6 +158,9 @@ const Home = ({navigation, appTheme}) => {
         }}>
         {/* Available rewards */}
         {renderAvailableRewards()}
+
+        {/* Promo */}
+        {renderPromoDeal()}
       </ScrollView>
     </View>
   );
