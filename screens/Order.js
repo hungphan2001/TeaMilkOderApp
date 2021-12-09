@@ -127,6 +127,19 @@ const Order = ({ navigation, route, appTheme }) => {
                 selected={selectedTab ==2}
                 onPress={() => setSelectedTab(2)}></TabButton>
                </View>
+
+               {/* Order Number */}
+               <View
+               style={{
+                   width:35,
+                   height:35,
+                   borderRadius:10,
+                   alignItems: 'center',
+                   justifyContent: 'center',
+                   backgroundColor:COLORS.primary
+               }}>
+                <Text style={{color: COLORS.white,...FONTS.h3}}>0</Text>
+               </View>
             </View>
         )
     }
