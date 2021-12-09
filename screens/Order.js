@@ -67,6 +67,19 @@ const Order = ({ navigation, route, appTheme }) => {
                     <View style={{ width: 25 }} />
                 </View>
                 {/* Location  */}
+                <View
+                    style={{
+                        marginTop: SIZES.radius,
+                        backgroundColor: COLORS.white1,
+                        paddingHorizontal: SIZES.radius,
+                        paddingVertical: 5,
+                        borderRadius: SIZES.padding
+                    }}
+                >
+                    <Text style={{ color: COLORS.primary, ...FONTS.body3 }}> {selectedLocation?.title} </Text>
+                </View>
+
+
 
 
             </SafeAreaView>
