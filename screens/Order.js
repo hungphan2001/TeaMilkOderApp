@@ -86,6 +86,51 @@ const Order = ({ navigation, route, appTheme }) => {
         )
     }
 
+    function renderTopTabBarSection(){
+        return(
+            <View style={{ 
+                flexDirection : 'row',
+                height: 50,
+                marginTop: SIZES.radius,
+                justifyContent: 'center',
+                paddingLeft: SIZES.padding *2,
+                paddingRight:SIZES.padding
+            }}>
+               {/* Tab Button  */}
+               <View 
+               style={{
+                flex: 1,
+                flexDirection: 'row',
+               }}>
+                <TabButton
+                containerStyle={{
+                    width: 60
+                }}
+                label="Menu"
+                selected={selectedTab ==0}
+                onPress={() => setSelectedTab(0)}>
+                </TabButton>
+
+               <TabButton
+                containerStyle={{
+                    width: 90
+                }}
+                label="Previous"
+                selected={selectedTab ==1}
+                onPress={() => setSelectedTab(1)}></TabButton>
+
+                <TabButton
+                containerStyle={{
+                    width: 90
+                }}
+                label="Favourite"
+                selected={selectedTab ==2}
+                onPress={() => setSelectedTab(2)}></TabButton>
+               </View>
+            </View>
+        )
+    }
+
     return (
         <View style={styles.container}>
             {/* Header  */}
@@ -101,7 +146,7 @@ const Order = ({ navigation, route, appTheme }) => {
                 }}
             >
                 {/* Tab Bar  */}
-
+                {renderTopTabBarSection()}
                 {/* Side Bar & Listing  */}
                 <View
                     style={{
