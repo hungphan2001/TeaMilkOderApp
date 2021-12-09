@@ -94,6 +94,10 @@ const Order = ({ navigation, route, appTheme }) => {
             <View
                 style={{
                     flex: 1,
+                    backgroundColor: appTheme.backgroundColor,
+                    marginTop: -45,
+                    borderTopLeftRadius: 40,
+                    borderTopRightRadius: 40
                 }}
             >
                 {/* Tab Bar  */}
