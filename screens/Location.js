@@ -273,11 +273,15 @@ const styles = StyleSheet.create({
 
     }
 })
-
 function mapStateToProps(state) {
     return {
         appTheme: state.appTheme,
+        error: state.error
     }
 }
 
-export default connect(mapStateToProps)(Location)
+function mapDispatchToProps(dispatch) {
+    return {}
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Location)
