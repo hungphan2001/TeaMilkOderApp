@@ -57,6 +57,34 @@ const Location = ({ navigation, appTheme }) => {
     }
 
     const renderTopBarSection = () => {
+        return(
+            <View
+                style={{
+                    flexDirection: 'row'
+                }}>
+                {/* Nearby  */}
+                <TabButton
+                    containerStyle={{ width: 80 }}
+                    label='Nearby'
+                    selected={selectedTab === 0}
+                    onPress={() => setSelectedTab(0)}
+                />
+                {/* Previous  */}
+                <TabButton
+                    containerStyle={{ width: 100 }}
+                    label='Previous'
+                    selected={selectedTab === 1}
+                    onPress={() => setSelectedTab(1)}
+                />
+                {/* Favourite  */}
+                <TabButton
+                    containerStyle={{ width: 100 }}
+                    label='Favourite'
+                    selected={selectedTab === 2}
+                    onPress={() => setSelectedTab(2)}
+                />
+            </View>
+        )
     }
 
     const renderLocationList = () => {
