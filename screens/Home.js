@@ -344,13 +344,12 @@ const styles = StyleSheet.create({
 function mapStateToProps(state) {
     return {
         appTheme: state.appTheme,
-        // error: state.error
+        error: state.error
     }
 }
 
-// function mapDispatchToProps(dispatch) {
-//     return {}
-// }
+function mapDispatchToProps(dispatch) {
+    return {}
+}
 
-// export default connect(mapStateToProps, mapDispatchToProps)(Home)
-export default connect(mapStateToProps)(Home)
+export default connect(mapStateToProps, mapDispatchToProps)(Home)
