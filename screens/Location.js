@@ -91,6 +91,42 @@ const Location = ({ navigation, appTheme }) => {
        
     }
 
+    const renderSearchBar = () => {
+        return(
+            <View
+            style={{
+                flexDirection:'row',
+                marginTop:SIZES.radius,
+                height: 50,
+                paddingHorizontal: SIZES.padding,
+                borderRadius: 25,
+                backgroundColor: COLORS.lightGreen2,
+                alignItems: 'center'
+            }}>
+                <TextInput
+                style={{
+                    flex: 1,
+                    height: 50,
+                    color:COLORS.black,
+                    ...FONTS.body3
+                }}
+                placeholder="enter your city, sate or zip code"
+                placeholderTextColor={COLORS.lightGray2}
+                >
+                
+                </TextInput>
+                <Image
+                source={icons.search}
+                style={{
+                    width: 30,
+                    height: 30,
+                    tintColor: COLORS.lightGray2,
+                }}
+        ></Image>
+            </View>
+        )
+    }
+
     return (
         <View style={styles.container}>
             {/* Header  */}
@@ -105,7 +141,7 @@ const Location = ({ navigation, appTheme }) => {
                 padding: SIZES.padding
             }}>
                 {renderTopBarSection()}
-                {/* {renderSearchBar()} */}
+                {renderSearchBar()}
                 {renderLocationList()}
             </View>
         </View>
