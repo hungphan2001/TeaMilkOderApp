@@ -56,7 +56,7 @@ export const menuList = [
     {
         id: 1,
         name: "Brown Sugar Fresh Milk Tea",
-        description: "lorem ipsum dolor sit amet",
+        description: "Uống nhiều béo đấy",
         price: "$4.50-$5.50",
         thumbnail: require("../assets/images/bubble-tea.png"),
         category: "Milk Tea"
@@ -64,7 +64,7 @@ export const menuList = [
     {
         id: 2,
         name: "Matcha Milk Tea",
-        description: "lorem ipsum dolor sit amet",
+        description: "Uống nhiều béo đấy",
         price: "$4.50-$5.50",
         thumbnail: require("../assets/images/bubble-tea.png"),
         category: "Milk Tea"
@@ -72,7 +72,7 @@ export const menuList = [
     {
         id: 3,
         name: "Strawberry Milk Tea",
-        description: "lorem ipsum dolor sit amet",
+        description: "Uống nhiều béo đấy",
         price: "$4.50-$5.50",
         thumbnail: require("../assets/images/bubble-tea.png"),
         category: "Milk Tea"
@@ -80,7 +80,7 @@ export const menuList = [
     {
         id: 4,
         name: "Ice Lemon Tea",
-        description: "lorem ipsum dolor sit amet",
+        description: "Uống nhiều béo đấy",
         price: "$4.50-$5.50",
         thumbnail: require("../assets/images/ice-tea.png"),
         category: "Specialtea"
@@ -88,7 +88,7 @@ export const menuList = [
     {
         id: 5,
         name: "Berry Smoothie",
-        description: "lorem ipsum dolor sit amet",
+        description: "Uống nhiều béo đấy",
         price: "$4.50-$5.50",
         thumbnail: require("../assets/images/smoothie.png"),
         category: "Smoothie"
@@ -96,7 +96,7 @@ export const menuList = [
     {
         id: 6,
         name: "Immune Booster",
-        description: "lorem ipsum dolor sit amet",
+        description: "Uống nhiều béo đấy",
         price: "$4.50-$5.50",
         thumbnail: require("../assets/images/smoothie.png"),
         category: "Smoothie"
@@ -104,7 +104,7 @@ export const menuList = [
     {
         id: 7,
         name: "Very Berry",
-        description: "lorem ipsum dolor sit amet",
+        description: "Uống nhiều béo đấy",
         price: "$4.50-$5.50",
         thumbnail: require("../assets/images/smoothie.png"),
         category: "Smoothie"
