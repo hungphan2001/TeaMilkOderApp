@@ -144,6 +144,59 @@ const Order = ({ navigation, route, appTheme }) => {
         )
     }
 
+    function renderSlideBar(){
+        return(
+            <View>
+            <Svg height="65" width="65" viewBox="0 0 65 65">
+                <Circle cx='5' cy='65' r="60" fill={COLORS.primary} />
+            </Svg>
+            <View
+                style={{
+                    marginTop: -10,
+                    width: 65,
+                    backgroundColor: COLORS.primary,
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    zIndex: 1
+                }}
+            >
+                <VerticalTextButton
+                    label="Snack"
+                    selected={selectedCategory === 'Snack'}
+                    onPress={() => setSelectedCategory('Snack')}
+                />
+                <VerticalTextButton
+                    label="Coffee"
+                    containerStyle={{ marginTop: 50 }}
+                    selected={selectedCategory === 'Coffee'}
+                    onPress={() => setSelectedCategory('Coffee')}
+                />
+                <VerticalTextButton
+                    label="Smoothie"
+                    containerStyle={{ marginTop: 70, width: 100 }}
+                    selected={selectedCategory === 'Smoothie'}
+                    onPress={() => setSelectedCategory('Smoothie')}
+                />
+                <VerticalTextButton
+                    label="SpecialTea"
+                    containerStyle={{ marginTop: 90, width: 100 }}
+                    selected={selectedCategory === 'Specialtea'}
+                    onPress={() => setSelectedCategory('Specialtea')}
+                />
+                <VerticalTextButton
+                    label="Milk Tea"
+                    containerStyle={{ marginTop: 80, width: 80 }}
+                    selected={selectedCategory === 'Milk Tea'}
+                    onPress={() => setSelectedCategory('Milk Tea')}
+                />
+            </View>
+            <Svg height="65" width="65" viewBox="0 0 65 65">
+                <Circle cx='5' cy='0' r="60" fill={COLORS.primary} />
+            </Svg>
+        </View>
+        )
+    }
+
     return (
         <View style={styles.container}>
             {/* Header  */}
@@ -168,7 +221,7 @@ const Order = ({ navigation, route, appTheme }) => {
                     }}
                 >
                     {/* Side Bar  */}
-
+                    {renderSlideBar()}
                     {/* Listing  */}
                 </View>
             </View>
