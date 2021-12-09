@@ -86,114 +86,112 @@ const Order = ({ navigation, route, appTheme }) => {
         )
     }
 
-    function renderTopTabBarSection(){
-        return(
-            <View style={{ 
-                flexDirection : 'row',
-                height: 50,
-                marginTop: SIZES.radius,
-                justifyContent: 'center',
-                paddingLeft: SIZES.padding *2,
-                paddingRight:SIZES.padding
-            }}>
-               {/* Tab Button  */}
-               <View 
-               style={{
-                flex: 1,
-                flexDirection: 'row',
-               }}>
-                <TabButton
-                containerStyle={{
-                    width: 60
+    const renderTopTabBarSection = () => {
+        return (
+            <View
+                style={{
+                    flexDirection: 'row',
+                    height: 50,
+                    marginTop: SIZES.radius,
+                    justifyContent: 'center',
+                    paddingLeft: SIZES.padding * 2,
+                    paddingRight: SIZES.padding
                 }}
-                label="Menu"
-                selected={selectedTab ==0}
-                onPress={() => setSelectedTab(0)}>
-                </TabButton>
-
-               <TabButton
-                containerStyle={{
-                    width: 90
-                }}
-                label="Previous"
-                selected={selectedTab ==1}
-                onPress={() => setSelectedTab(1)}></TabButton>
-
-                <TabButton
-                containerStyle={{
-                    width: 90
-                }}
-                label="Favourite"
-                selected={selectedTab ==2}
-                onPress={() => setSelectedTab(2)}></TabButton>
-               </View>
-
-               {/* Order Number */}
-               <View
-               style={{
-                   width:35,
-                   height:35,
-                   borderRadius:10,
-                   alignItems: 'center',
-                   justifyContent: 'center',
-                   backgroundColor:COLORS.primary
-               }}>
-                <Text style={{color: COLORS.white,...FONTS.h3}}>0</Text>
-               </View>
+            >
+                {/* Tab buttons  */}
+                <View
+                    style={{
+                        flex: 1,
+                        flexDirection: 'row'
+                    }}
+                >
+                    <TabButton
+                        containerStyle={{ width: 60 }}
+                        label='Menu'
+                        selected={selectedTab === 0}
+                        onPress={() => setSelectedTab(0)}
+                    />
+                    <TabButton
+                        containerStyle={{ width: 90 }}
+                        label='Previous'
+                        selected={selectedTab === 1}
+                        onPress={() => setSelectedTab(1)}
+                    />
+                    <TabButton
+                        containerStyle={{ width: 90 }}
+                        label='Favourite'
+                        selected={selectedTab === 2}
+                        onPress={() => setSelectedTab(2)}
+                    />
+                </View>
+                {/* Order Numder  */}
+                <View
+                    style={{
+                        width: 35,
+                        height: 35,
+                        borderRadius: 10,
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        backgroundColor: COLORS.primary
+                    }}
+                >
+                    <Text style={{ color: COLORS.white, ...FONTS.h3 }}>0</Text>
+                </View>
             </View>
         )
     }
 
-    function renderSlideBar(){
-        return(
+
+    const renderSideBar = () => {
+        return (
             <View>
-            <Svg height="65" width="65" viewBox="0 0 65 65">
-                <Circle cx='5' cy='65' r="60" fill={COLORS.primary} />
-            </Svg>
-            <View
-                style={{
-                    marginTop: -10,
-                    width: 65,
-                    backgroundColor: COLORS.primary,
-                    alignItems: 'center',
-                    justifyContent: 'center',
-                    zIndex: 1
-                }}
-            >
-                <VerticalTextButton
-                    label="Snack"
-                    selected={selectedCategory === 'Snack'}
-                    onPress={() => setSelectedCategory('Snack')}
-                />
-                <VerticalTextButton
-                    label="Coffee"
-                    containerStyle={{ marginTop: 50 }}
-                    selected={selectedCategory === 'Coffee'}
-                    onPress={() => setSelectedCategory('Coffee')}
-                />
-                <VerticalTextButton
-                    label="Smoothie"
-                    containerStyle={{ marginTop: 70, width: 100 }}
-                    selected={selectedCategory === 'Smoothie'}
-                    onPress={() => setSelectedCategory('Smoothie')}
-                />
-                <VerticalTextButton
-                    label="SpecialTea"
-                    containerStyle={{ marginTop: 90, width: 100 }}
-                    selected={selectedCategory === 'Specialtea'}
-                    onPress={() => setSelectedCategory('Specialtea')}
-                />
-                <VerticalTextButton
-                    label="Milk Tea"
-                    containerStyle={{ marginTop: 80, width: 80 }}
-                    selected={selectedCategory === 'Milk Tea'}
-                    onPress={() => setSelectedCategory('Milk Tea')}
-                />
+                <Svg height="65" width="65" viewBox="0 0 65 65">
+                    <Circle cx='5' cy='65' r="60" fill={COLORS.primary} />
+                </Svg>
+                <View
+                    style={{
+                        marginTop: -10,
+                        width: 65,
+                        backgroundColor: COLORS.primary,
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        zIndex: 1
+                    }}
+                >
+                    <VerticalTextButton
+                        label="Snack"
+                        selected={selectedCategory === 'Snack'}
+                        onPress={() => setSelectedCategory('Snack')}
+                    />
+                    <VerticalTextButton
+                        label="Coffee"
+                        containerStyle={{ marginTop: 50 }}
+                        selected={selectedCategory === 'Coffee'}
+                        onPress={() => setSelectedCategory('Coffee')}
+                    />
+                    <VerticalTextButton
+                        label="Smoothie"
+                        containerStyle={{ marginTop: 70, width: 100 }}
+                        selected={selectedCategory === 'Smoothie'}
+                        onPress={() => setSelectedCategory('Smoothie')}
+                    />
+                    <VerticalTextButton
+                        label="Specialtea"
+                        containerStyle={{ marginTop: 90, width: 100 }}
+                        selected={selectedCategory === 'Specialtea'}
+                        onPress={() => setSelectedCategory('Specialtea')}
+                    />
+                    <VerticalTextButton
+                        label="Milk Tea"
+                        containerStyle={{ marginTop: 80, width: 80 }}
+                        selected={selectedCategory === 'Milk Tea'}
+                        onPress={() => setSelectedCategory('Milk Tea')}
+                    />
+                </View>
+                <Svg height="65" width="65" viewBox="0 0 65 65">
+                    <Circle cx='5' cy='0' r="60" fill={COLORS.primary} />
+                </Svg>
             </View>
-            <Svg height="65" width="65" viewBox="0 0 65 65">
-                <Circle cx='5' cy='0' r="60" fill={COLORS.primary} />
-            </Svg>
-        </View>
         )
     }
 
@@ -213,6 +211,7 @@ const Order = ({ navigation, route, appTheme }) => {
             >
                 {/* Tab Bar  */}
                 {renderTopTabBarSection()}
+
                 {/* Side Bar & Listing  */}
                 <View
                     style={{
@@ -221,8 +220,90 @@ const Order = ({ navigation, route, appTheme }) => {
                     }}
                 >
                     {/* Side Bar  */}
-                    {renderSlideBar()}
+                    {renderSideBar()}
                     {/* Listing  */}
+                    <FlatList
+                        contentContainerStyle={{
+                            marginTop: SIZES.padding,
+                            paddingBottom: 50
+                        }}
+                        data={menu}
+                        keyExtractor={item => item.id}
+                        renderItem={({ item, index }) => {
+                            return (
+                                <TouchableWithoutFeedback
+                                    onPress={() => navigation.navigate('OrderDetail', { selectedItem: item })}
+                                >
+                                    <View
+                                        style={{
+                                            height: 150,
+                                            paddingHorizontal: SIZES.padding,
+                                            marginTop: index > 0 ? SIZES.padding : 0,
+                                            alignItems: 'flex-end',
+                                            justifyContent: 'flex-end'
+                                        }}>
+                                        {/* Thumbnail  */}
+                                        <View
+                                            style={{
+                                                position: 'absolute',
+                                                top: 0,
+                                                left: SIZES.padding,
+                                                width: 130,
+                                                height: 140,
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                borderRadius: SIZES.radius,
+                                                backgroundColor: COLORS.lightYellow,
+                                                zIndex: 1
+                                            }}
+                                        >
+                                            <Image
+                                                source={item.thumbnail}
+                                                resizeMode="contain"
+                                                style={{
+                                                    width: 100,
+                                                    height: 100
+                                                }}
+
+                                            />
+                                        </View>
+                                        {/* Details  */}
+                                        <View
+                                            style={{
+                                                width: '70%',
+                                                height: '85%',
+                                                paddingLeft: '22%',
+                                                paddingRight: SIZES.base,
+                                                borderRadius: SIZES.radius,
+                                                justifyContent: 'space-between',
+                                                backgroundColor: COLORS.primary
+                                            }}
+                                        >
+                                            <Text
+                                                style={{
+                                                    color: COLORS.white,
+                                                    ...FONTS.h2,
+                                                    fontSize: 18,
+                                                    lineHeight: 25
+                                                }}
+                                            >
+                                                {item.name}
+                                            </Text>
+                                            <Text
+                                                style={{
+                                                    color: COLORS.lightYellow,
+                                                    ...FONTS.h2,
+                                                    fontSize: 18,
+                                                }}
+                                            >
+                                                {item.price}
+                                            </Text>
+                                        </View>
+                                    </View>
+                                </TouchableWithoutFeedback>
+                            )
+                        }}
+                    />
                 </View>
             </View>
         </View>
@@ -234,7 +315,6 @@ const styles = StyleSheet.create({
         flex: 1,
     }
 })
-
 
 function mapStateToProps(state) {
     return {
